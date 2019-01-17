@@ -36,6 +36,7 @@ function setData(rootContext) {
   if (lastData) {
     // 更新了 lastData 等待 setData 发生即可, 只再两个值不等时赋值
     if(!isEqual(lastData, pureObject)) {
+      console.log("rendering");
       lastData = pureObject;
     }
   } else {
